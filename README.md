@@ -55,7 +55,7 @@ Devuelve 1 si la entrada es mayor o igual a 0, y 0 en caso contrario. Su derivad
 
 ```python
 def step_function(x):
-    return np.where(x < 0, 0, 1)
+    return np.where(x >= 0, 1, 0)
 ```
 
 ### Función gaussiana
@@ -64,7 +64,7 @@ Define una campana centrada en 0 con la ecuación \( e^{-x^2} \). Su derivada es
 
 ```python
 def gaussian(x):
-    return (1 / np.sqrt(2 * np.pi)) * np.exp(-x**2 / 2)
+    return np.exp(-x**2)
 ```
 
 ### Función identidad
@@ -72,7 +72,7 @@ def gaussian(x):
 Devuelve el mismo valor de entrada. Su derivada es siempre 1.
 
 ```python
-def identidad(x):
+def identity(x):
     return x
 ```
 
@@ -108,7 +108,7 @@ def sigmoid(x):
 Función seno estándar \( \sin(x) \) con derivada \( \cos(x) \).
 
 ```python
-def sin_func(x):
+def sinusoidal(x):
     return np.sin(x)
 ```
 
@@ -117,7 +117,7 @@ def sin_func(x):
 Definida como \( \tanh(x) \), su derivada es \( 1 - \tanh^2(x) \).
 
 ```python
-def tanh_func(x):
+def tanh(x):
     return np.tanh(x)
 ```
 
